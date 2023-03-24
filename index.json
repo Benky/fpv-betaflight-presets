@@ -132,10 +132,38 @@
     }
   },
   "uniqueValues": {
-    "firmware_version": [],
-    "category": [],
-    "author": [],
-    "keywords": []
+    "firmware_version": [
+      "4.4"
+    ],
+    "category": [
+      "OSD"
+    ],
+    "author": [
+      "Benky"
+    ],
+    "keywords": [
+      "defaults",
+      "OSD",
+      "reset"
+    ]
   },
-  "presets": []
+  "presets": [
+    {
+      "fullPath": "presets/4.4/osd/dji.txt",
+      "hash": "098b57dae6c89af72a780665624a6dfc2faf90ce66c66856ac52bdb7d0c0b2de",
+      "title": "OSD settings for DJI drones",
+      "firmware_version": [
+        "4.4"
+      ],
+      "category": "OSD",
+      "status": "OFFICIAL",
+      "keywords": [
+        "defaults",
+        "reset",
+        "OSD"
+      ],
+      "author": "Benky",
+      "priority": 0
+    }
+  ]
 }
