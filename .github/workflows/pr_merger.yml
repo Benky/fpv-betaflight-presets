@@ -1,0 +1,37 @@
+name: PR Merger
+
+on:
+  pull_request_review:
+    types:
+      - submitted
+
+jobs:
+  modify_pr:
+    runs-on: ubuntu-latest
+    if: github.event.review.state == 'approved'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run indexer/indexer.js
+        run: node indexer/indexer.js
+
+      - name: Run indexer/check.js
+        run: node indexer/check.js
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git commit -m "Automated modifications after PR approval" || echo "No changes to commit"
+          git push
