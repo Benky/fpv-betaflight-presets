@@ -1,14 +1,13 @@
 name: PR Merger
 
 on:
-  pull_request_review:
-    types:
-      - submitted
+  push:
+    branches:
+      - main
 
 jobs:
   modify_pr:
     runs-on: ubuntu-latest
-    if: github.event.review.state == 'approved'
 
     steps:
       - name: Checkout repository
