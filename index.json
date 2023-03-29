@@ -150,7 +150,7 @@
   "presets": [
     {
       "fullPath": "presets/4.4/osd/dji.txt",
-      "hash": "098b57dae6c89af72a780665624a6dfc2faf90ce66c66856ac52bdb7d0c0b2de",
+      "hash": "36d6e0bda88c0d383317409032738506767445e079e1dff22b0ae71eb5146df6",
       "title": "OSD settings for DJI drones",
       "firmware_version": [
         "4.4"
